@@ -1,0 +1,166 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap:15%;
+}
+.about__me{
+    width:100%;
+    border-radius: 2rem;
+    height: 100%;
+    background:linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+
+    position: relative;
+}
+.about__me-image {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    /* object-fit: none; */
+    
+    border-radius: 2rem;
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    
+  }
+  .about__me-image img{
+    display: block; 
+ width: 100%;
+ height: 100%; 
+/* height: 240px;  */
+ object-fit: fill; 
+ border-radius: 2rem;
+  }
+
+.about__me-image:hover{
+    transform: rotate(0);
+}
+.about__cards{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5rem;
+}
+.about__card{
+    background: var(--color-bg-variant);
+    border:1px solid transparent;
+    border-radius:1rem;
+    padding:2rem;
+    text-align: center;
+    transition: var(--tranisition);
+}
+.about__card:hover{
+background: transparent;
+background-color: var(--color-primary-variant);
+cursor:default;
+}
+.about__icons{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.about__card h5 {
+    font-size: 0.95rem;
+}
+.about__card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+.about__content p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+    filter: brightness(74%);
+
+}
+/*...................................Media Queries for responsive Design medium devices..........................*/
+@media screen and (max-width:1024px) {
+    .about__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:10%;
+        height: 100%;
+}
+.about__me{
+    margin-left: 17%;
+    width: 65%;
+    height: 400px;
+    /* margin: 2rem auto 4rem; */
+}
+.about__me-image img{
+    display: block; 
+ width: 100%;
+ height: 100%; 
+ object-fit: fill; 
+ border-radius: 2rem;
+  }
+.about__content p {
+    margin: 1rem 0 1.5rem;
+}
+.about__me-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    
+  }
+}
+/*................................Media queries for small devices......................*/
+@media screen and (max-width:600px) {
+    .about__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:3%;
+        height: 100%;
+    }
+    .about__me {
+        margin-left: 0%;
+    width: 55%;
+    height: 300px;
+    margin: 0 auto 3rem;
+ }
+
+ .about__me-image img{
+    display: block; 
+ width: 100%;
+ height: 100%; 
+/* height: 240px;  */
+ object-fit: fill; 
+ border-radius: 2rem;
+  }
+ .about__cards {
+    grid-template-columns: 1fr 1fr ;
+    gap:1rem;
+ }
+ .about__content{
+    text-align: center;
+ }
+ .about__content p {
+    margin: 1.5rem 0 ;
+ }
+ .about__me-image {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    
+  }
+}
